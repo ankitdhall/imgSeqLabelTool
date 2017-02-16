@@ -11,11 +11,8 @@ If you are not satisfied with the tracker's output, you can provide new bounding
 Prerequisites:
 
 [python](https://www.python.org/)
-
 [OpenCV](http://opencv.org/)
-
 [numpy](http://www.numpy.org/)
-
 [dlib](https://pypi.python.org/pypi/dlib)
 
 
@@ -23,6 +20,10 @@ Prerequisites:
 After you have installed the pre-requisites, let's begin using imgSeqLabelTool.
 
 First, we would want to ensure that you have a folder that holds all the images you wish to label and a directory for storing their corresponding annotation files. This repository has stored the `images/` in the frames folder and the anotated files in the `annotations/` folder (duh!).
+
+> Since you'd want to exploit the structure in consecutive frames, make sure
+> your images are named (incrementally) in the order that they are captured to 
+> get best results. 
 
 Now that we have all the folder setup, just add them to the function call in the `imgSeqLabelTool.py`,
 ```python
@@ -38,8 +39,9 @@ python imgSeqLabelTool.py
 ```
 
 ### Usage
-There are a couple features that come with `imgSeqLabelTool`. Hopefully, there will be more additions in the future.
-* To provide your bounding boxes, `press n`
+There are a couple features that come with `imgSeqLabelTool`. Hopefully, there will be more additions in the future. Make sure the image window is active while executing these commands.
+
+* To begin, `press n` on the first image
 * Draw bounding boxes by clicking and dragging. You should see your labels overlayed on the image.
 * Once you are done with labeling the boxes, `press m` to tell the tool that you've *marked* the boxes and that it can now begin tracking them and proceed to the next frame.
 * The next frame will show you the proposed boxes by the tracker, if you like them, `press m` and move to the next frame. Otherwise, you can `press n` if you are *not happy* and reset the boxes, providing new ones yourself.
@@ -47,10 +49,18 @@ There are a couple features that come with `imgSeqLabelTool`. Hopefully, there w
 * Each time you `press m` the annotations for the file are saved automatically (refer to `to_xml.py`).
 * To *quit*, `press q`
 
-Note: Since you'd want to exploit the structure in consecutive frames, make sure your images are named (incrementally) in the order that they are captured to get best results. 
+In summary,
 
+Key press | function
+--- | ---
+`press n` | start labeling/reset boxes, when *not happy* by boxes provided by the tracker(beginning of each image)
+`press m` | tell `imgSeqLabelTool` that you have *marked* all the boxes and it can proceed to the next image; also saves the image's annotation
+`press e` | *erase* the latest box that you made
+`press q` | *quit* `imgSeqLabelTool`
 
 
 # Future improvements
-Currently, imgSeqLabelTool supports labeling a single object class.
-It would also be useful for some users to obtain annotation in various formats, especially a comma or space-separated .txt file.
+Currently, imgSeqLabelTool supports writing annotation files only for a single object class. It would also be useful for some users to obtain annotation in various formats, especially a comma or space-separated .txt file.
+
+[] support multi-class label writing to annotation file
+[] support `.txt` format
