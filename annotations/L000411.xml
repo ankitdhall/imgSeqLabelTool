@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>trees</folder>
+	<filename>L000411.png</filename>
+	<source>
+		<database>RGB-D trees db</database>
+		<annotation>RGB-D trees annotation</annotation>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>4</depth>
+	</size>
+	<object>
+		<name>tree</name>
+		<bndbox>
+			<xmin>375</xmin>
+			<ymin>110</ymin>
+			<xmax>490</xmax>
+			<ymax>420</ymax>
+		</bndbox>
+	</object>
+</annotation>
