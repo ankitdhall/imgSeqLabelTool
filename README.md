@@ -9,7 +9,8 @@ If you are not satisfied with the tracker's output, you can provide new bounding
 # Contents
 1. [Setup](#setup)
 2. [Getting Started](#getting-started)
-3. [Future Improvements](#future-improvements)
+3. [Stats](#stats)
+4. [Future Improvements](#future-improvements)
 
 # Setup
 Prerequisites:
@@ -62,7 +63,16 @@ Key press | function
 `press e` | *erase* the latest box that you made
 `press q` | *quit* `imgSeqLabelTool`
 
-# Future improvements
+### Stats
+I had tried several annotation tools before but there was none that had the feature of tracking over consecutive frames, especially when the data was structured that way. Having to label thousands of images when there clearly was structure waiting to be exploited didn't feel right. `imgSeqLabelTool` helped me increase my speed by ~4x-5x. I had to label only very few images as the rest would be taken care by the awesome [dlib correlation tracker](http://blog.dlib.net/2015/02/dlib-1813-released.html). The tool was used to label a specific dataset for a single object category. On an average the annotators had to label only 1 in every 5 images. Obviously, this depends on several factors,
+
+1. The dataset; how clear are the images and are the objects two close/overlapping each other?
+2. Continuity between images; a smooth transition would require even less amount of human labeling, making it faster
+3. How familiar are the annotators to the interface? Given it's a very minimal interface, one might expect annotators to take a little more time to familiarize themselves with it initially.
+
+Before using dlib's tracker I was using OpenCV's tracker. Using colors(HSV) as features for the CamShift and MeanShift algorithms, it doesn't generally work well in the wild. The correlation tracker from dlib worked almost perfectly.
+
+### Future improvements
 Currently, imgSeqLabelTool supports writing annotation files only for a single object class. It would also be useful for some users to obtain annotation in various formats, especially a comma or space-separated .txt file.
 
 - [ ] support multi-class label writing to annotation file
