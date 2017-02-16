@@ -9,10 +9,11 @@ If you are not satisfied with the tracker's output, you can provide new bounding
 
 # Setup
 Prerequisites:
-dlib
-opencv
-numpy
-python
+[python](https://www.python.org/)
+[OpenCV](http://opencv.org/)
+[numpy](http://www.numpy.org/)
+[dlib](https://pypi.python.org/pypi/dlib)
+
 
 # Getting Started
 After you have installed the pre-requisites, let's begin using imgSeqLabelTool.
@@ -20,6 +21,12 @@ After you have installed the pre-requisites, let's begin using imgSeqLabelTool.
 First, we would want to ensure that you have a folder that holds all the images you wish to label and a directory for storing their corresponding annotation files. This repository has stored the `images/` in the frames folder and the anotated files in the `annotations/` folder (duh!).
 
 Now that we have all the folder setup, just add them to the function call in the imgSeqLabelTool.py file,
+```python
+if __name__ == '__main__':
+    # pass the ("path/to/img/directory", "path/to/annotation/directory", "image_extension", "image_index_to_begin_from")
+    a = annotate("frames/", "annotations/", "png", 0)
+    a.viewer()
+```
 
 
 
