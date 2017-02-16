@@ -51,22 +51,15 @@ There are a couple features that come with `imgSeqLabelTool`. Hopefully, there w
 
 In summary,
 
-Key press | function
------ | -----
-`press n` | start labeling/reset boxes, when *not happy* by boxes provided by the tracker(beginning of each image)
-`press m` | tell `imgSeqLabelTool` that you have *marked* all the boxes and it can proceed to the next image; also saves the image's annotation
-`press e` | *erase* the latest box that you made
-`press q` | *quit* `imgSeqLabelTool`
-
 Key press | function         
 --------- | -------------------------------
-`press n` | start labeling/reset boxes, when *not happy* by boxes provided by the tracker(beginning of each image)
-`press m` | tell `imgSeqLabelTool` that you have *marked* all the boxes and it can proceed to the next image; also saves the image's annotation
+`press n` | reset boxes, when *not happy* by boxes provided by the tracker (at the beginning of each image)
+`press m` | tell `imgSeqLabelTool` that you have *marked* the boxes, save annotation and move to next image
 `press e` | *erase* the latest box that you made
 `press q` | *quit* `imgSeqLabelTool`
 
 # Future improvements
 Currently, imgSeqLabelTool supports writing annotation files only for a single object class. It would also be useful for some users to obtain annotation in various formats, especially a comma or space-separated .txt file.
 
-[] support multi-class label writing to annotation file
-[] support `.txt` format
+- [ ] support multi-class label writing to annotation file
+- [ ] support `.txt` format
