@@ -52,7 +52,7 @@ There are a couple features that come with `imgSeqLabelTool`. Hopefully, there w
 In summary,
 
 Key press | function
---- | ---
+----- | -----
 `press n` | start labeling/reset boxes, when *not happy* by boxes provided by the tracker(beginning of each image)
 `press m` | tell `imgSeqLabelTool` that you have *marked* all the boxes and it can proceed to the next image; also saves the image's annotation
 `press e` | *erase* the latest box that you made
