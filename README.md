@@ -9,9 +9,13 @@ If you are not satisfied with the tracker's output, you can provide new bounding
 
 # Setup
 Prerequisites:
+
 [python](https://www.python.org/)
+
 [OpenCV](http://opencv.org/)
+
 [numpy](http://www.numpy.org/)
+
 [dlib](https://pypi.python.org/pypi/dlib)
 
 
@@ -20,7 +24,7 @@ After you have installed the pre-requisites, let's begin using imgSeqLabelTool.
 
 First, we would want to ensure that you have a folder that holds all the images you wish to label and a directory for storing their corresponding annotation files. This repository has stored the `images/` in the frames folder and the anotated files in the `annotations/` folder (duh!).
 
-Now that we have all the folder setup, just add them to the function call in the imgSeqLabelTool.py file,
+Now that we have all the folder setup, just add them to the function call in the `imgSeqLabelTool.py`,
 ```python
 if __name__ == '__main__':
     # pass the ("path/to/img/directory", "path/to/annotation/directory", "image_extension", "image_index_to_begin_from")
@@ -28,7 +32,20 @@ if __name__ == '__main__':
     a.viewer()
 ```
 
+Once you have added your paths to `imgSeqLabelTool.py` you are ready to begin.
+```shell
+python imgSeqLabelTool.py
+```
 
+### Usage
+There are a couple features that come with `imgSeqLabelTool`. Hopefully, there will be more additions in the future.
+* To provide your bounding boxes, `press n`
+* Draw bounding boxes by clicking and dragging. You should see your labels overlayed on the image.
+* Once you are done with labeling the boxes, `press m` to tell the tool that you've *marked* the boxes and that it can now begin tracking them and proceed to the next frame.
+* The next frame will show you the proposed boxes by the tracker, if you like them, `press m` and move to the next frame. Otherwise, you can `press n` if you are *not happy* and reset the boxes, providing new ones yourself.
+* If you are unhappy with a box that you drew, `press e` to *erase* the latest box drawn by you.
+* Each time you `press m` the annotations for the file are saved automatically (refer to `to_xml.py`).
+* To *quit*, `press q`
 
 Note: Since you'd want to exploit the structure in consecutive frames, make sure your images are named (incrementally) in the order that they are captured to get best results. 
 
