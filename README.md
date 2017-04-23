@@ -9,7 +9,6 @@ If you are not satisfied with the tracker's output, you can provide new bounding
 
 ![Labeling continuous sequence of images is easy!](annotation.gif "Labeling continuous sequence of images is easy!")
 
-Reference-style: 
 
 ### Contents
 1. [Setup](#setup)
