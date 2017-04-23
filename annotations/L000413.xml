@@ -14,10 +14,19 @@
 	<object>
 		<name>tree</name>
 		<bndbox>
-			<xmin>424</xmin>
-			<ymin>119</ymin>
-			<xmax>543</xmax>
-			<ymax>439</ymax>
+			<xmin>409</xmin>
+			<ymin>56</ymin>
+			<xmax>525</xmax>
+			<ymax>454</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>tree</name>
+		<bndbox>
+			<xmin>230</xmin>
+			<ymin>85</ymin>
+			<xmax>330</xmax>
+			<ymax>365</ymax>
 		</bndbox>
 	</object>
 </annotation>

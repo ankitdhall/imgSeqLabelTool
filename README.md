@@ -6,6 +6,11 @@ This tool exploits the similar structure in consecutive frames of a continuous s
 You start by providing bounding boxes for a frame and using dlib's trackers the tool tracks your objects to the next frame. Simple, right?
 
 If you are not satisfied with the tracker's output, you can provide new bounding boxes for the tracker to track from that frame onwards. If you are satisfied with the tracker's bounding boxes, which happens in 4/5 cases, with just a single key press you can save the annotation and move on to the next frame in a flash.
+
+![Labeling continuous sequence of images is easy!](annotation.gif "Labeling continuous sequence of images is easy!")
+
+Reference-style: 
+
 ### Contents
 1. [Setup](#setup)
 2. [Getting Started](#getting-started)

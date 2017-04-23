@@ -14,9 +14,9 @@
 	<object>
 		<name>tree</name>
 		<bndbox>
-			<xmin>336</xmin>
-			<ymin>61</ymin>
-			<xmax>457</xmax>
+			<xmin>347</xmin>
+			<ymin>42</ymin>
+			<xmax>458</xmax>
 			<ymax>425</ymax>
 		</bndbox>
 	</object>
@@ -24,18 +24,9 @@
 		<name>tree</name>
 		<bndbox>
 			<xmin>183</xmin>
-			<ymin>82</ymin>
-			<xmax>276</xmax>
-			<ymax>363</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>tree</name>
-		<bndbox>
-			<xmin>127</xmin>
-			<ymin>118</ymin>
-			<xmax>176</xmax>
-			<ymax>306</ymax>
+			<ymin>77</ymin>
+			<xmax>278</xmax>
+			<ymax>344</ymax>
 		</bndbox>
 	</object>
 </annotation>
